@@ -1,0 +1,14 @@
+{
+  "name": "uglyfuzzy",
+  "version": "1.0.0",
+  "description": "A fuzzer to test uglifyjs",
+  "main": "index.js",
+  "dependencies": {
+    "uglify-js": "*"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "author": "Peter van der Zee <npm-public@qfox.nl> (http://qfox.nl/)",
+  "license": "ISC"
+}
