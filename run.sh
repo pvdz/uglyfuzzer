@@ -6,13 +6,20 @@ while true; do
 
   CODE=$(node index.js);
 
-  echo "$CODE
-
-  ";
   echo "$CODE" > z.js
+  MINCODE=$(node_modules/.bin/uglifyjs z.js -c 2>/dev/null);
+
+  echo "
+###
+$CODE
+###
+$MINCODE
+###
+  ";
 
   ORG=$(node z.js);
-  MIN=$(node_modules/.bin/uglifyjs z.js -c | node);
+  echo "$MINCODE" > min.js
+  MIN=$(node min.js)
 
   echo "
   org: $ORG
